@@ -1,0 +1,148 @@
+<div class="container2">
+  <div class="header-block">
+    <label class="main-heading">System Setup</label>
+    <label class="sub-heading">Click on the image to view details</label>
+  </div>
+  <div class="pt-4">
+    <div class="row ">
+      <div class="col-xl-3" style="padding-left: 25px;">
+        <div class="status-title">
+          <label>Probe</label>
+        </div>
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="main-blocks">
+              <div class="block1 hand-cursor" (click)="checkEvent('8')">
+                <img src="assets/images/system-setup/probe.png">
+                <img class="status-icon" *ngIf="errorStatus && connectProbe"
+                  src="assets/images/system-setup/error-icon.png">
+                <img class="status-icon" *ngIf="connectProbe && !errorStatus" src="assets/images/done-tick.png">
+                <label class="title">Connect Probe</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-xl-12">
+            <div class=" main-blocks">
+              <div class="block1"
+                [ngClass]="[(connectProbe && !errorStatus) ? 'hand-cursor' : '', (!connectProbe || errorStatus) ? 'disabled-block' : 'enabled-block' ]"
+                (click)="(connectProbe && !errorStatus)? checkEvent('0') : ''">
+                <img src="assets/images/system-setup/Probe-Tip-Check.png">
+                <img class="status-icon" *ngIf="verifyProbe" src="assets/images/done-tick.png">
+                <!-- <span *ngIf="!connectProbe || errorStatus" class="disable-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span> -->
+                <label [ngClass]="(!connectProbe || errorStatus) ? 'title1' : 'title'">Verify Probe Tip</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 borderd-box" style="padding-left: 50px;">
+        <div class="status-title">
+          <label>Robot Cart</label>
+        </div>
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="main-blocks">
+              <div class="block1 hand-cursor" (click)="checkEvent('1')">
+                <img src="assets/images/system-setup/Position-Robot-Cart.png">
+                <img class="status-icon" *ngIf="positionRobot" src="assets/images/done-tick.png">
+                <label class="title">Position Robot Cart</label>
+              </div>
+              <div class="block2"
+                [ngClass]="[positionRobot ? 'hand-cursor' : '', !positionRobot ? 'disabled-block' : 'enabled-block' ]"
+                (click)="positionRobot? checkEvent('2') : ''">
+                <img src="assets/images/system-setup/robot_cart.png">
+                <img class="status-icon" *ngIf="connectRobot" src="assets/images/done-tick.png">
+                <!-- <span *ngIf="!positionRobot" class="disable-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span> -->
+                <label [ngClass]="!positionRobot ? 'title1' : 'title'">Connect Robot Cart</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-xl-12">
+            <div class="main-blocks">
+              <div class="block1"
+                [ngClass]="[connectRobot ? 'hand-cursor' : '', !connectRobot ? 'disabled-block' : 'enabled-block']"
+                (click)="connectRobot? checkEvent('3') : ''">
+                <img src="assets/images/system-setup/drape.png">
+                <img class="status-icon" *ngIf="dropeRobotic" src="assets/images/done-tick.png">
+                <!-- <span *ngIf="!connectRobot" class="disable-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span> -->
+                <label [ngClass]="!connectRobot ? 'title1' : 'title'">Drape Robotic Arm</label>
+              </div>
+              <div class="block2"
+                [ngClass]="[dropeRobotic ? 'hand-cursor' : '', !dropeRobotic ? 'disabled-block' : 'enabled-block']"
+                (click)="dropeRobotic? checkEvent('4') : ''">
+                <img src="assets/images/system-setup/mount_end_effector.png">
+                <img class="status-icon" *ngIf="endEffectot" src="assets/images/done-tick.png">
+                <!-- <span *ngIf="!dropeRobotic" class="disable-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span> -->
+                <label [ngClass]="!dropeRobotic ? 'title1' : 'title'">Mount End Effector</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-xl-12">
+            <div class=" main-blocks">
+              <div class="block1"
+                [ngClass]="[endEffectot ? 'hand-cursor' : '', !endEffectot ? 'disabled-block' : 'enabled-block']"
+                (click)="endEffectot? checkEvent('5') : ''">
+                <img src="assets/images/system-setup/irrigation.png">
+                <img class="status-icon" *ngIf="mountIrrigation" src="assets/images/done-tick.png">
+                <!-- <span *ngIf="!endEffectot" class="disable-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span> -->
+                <label [ngClass]="!endEffectot ? 'title1' : 'title'">Mount Irrigation</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xl-3" style="padding-left: 50px;">
+        <div class="status-title">
+          <label>Tracking</label>
+        </div>
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="main-blocks">
+              <div class="block1 hand-cursor" (click)="checkEvent('6')">
+                <img src="assets/images/system-setup/tracker.png">
+                <img class="status-icon" *ngIf="boneTracker" src="assets/images/done-tick.png">
+                <label class="title">Install Bone Trackers</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-xl-12">
+            <div class=" main-blocks">
+              <div class="block1"
+                [ngClass]="[boneTracker ? 'hand-cursor' : '', !boneTracker ? 'disabled-block' : 'enabled-block']"
+                (click)="boneTracker? checkEvent('7'): '' ">
+                <img src="assets/images/system-setup/camera.png">
+                <img class="status-icon" *ngIf="cameraView" src="assets/images/done-tick.png">
+                <!-- <span *ngIf="!boneTracker" class="disable-icon"><i class="fa fa-times-circle" aria-hidden="true"></i></span> -->
+                <label [ngClass]="!boneTracker ? 'title1' : 'title'">Verify Camera View</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row top-padding">
+    <div class="col-xl-12">
+      <div class="form-group" style="text-align: right;">
+        <button type="button" class="btn-Prev mr-5" (click)="onPrev()"><img class="icons-prev" src="../../assets/images/prev-icon.png">Previous</button>
+        <button type="button" class="btn-next" [disabled]="!connectProbe || !verifyProbe || !connectRobot || !dropeRobotic || !endEffectot || !mountIrrigation || !cameraView" (click)="onNext()" >Next <img class="icons-next" src="../../assets/images/next-icon.png"></button>
+        <!-- <button type="button" class="btn-next" (click)="onNext()">Next <img class="icons-next" src="../../assets/images/next-icon.png"></button> -->
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-system-popups [display]="displayPopupDialog" [selectedPopup]="selectedBlock" (onClose)="onPopupDialogClose()">
+</app-system-popups>
+<app-system-errors [display]="displayErrorDialog" (onClose)="onErrorDialogClose()"></app-system-errors>
+<app-patient-timeout [display]="displayPatientDialog" (onClose)="onPatientDialogClose()"></app-patient-timeout>

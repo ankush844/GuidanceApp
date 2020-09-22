@@ -1,0 +1,363 @@
+<div class="main-container">
+  <div class="heading-title">User Preferences</div>
+  <div class="general-container">
+    <label class="general-label-title">General</label>
+    <div class="main-container-padding">
+      <div class="row">
+        <div class="col-xl-3">
+          <label class="general-labels">Language Selection</label>
+          <div>
+            <select class="form-control">
+              <option value="null">English</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <label class="general-labels">Speaker Volume</label>
+          <div class="flex-display">
+            <span class="sound-icon"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" [value]="slider1Value" [(ngModel)]="slider1Value" class="slider"
+                id="myRange">
+            </div>
+            <span class="slider-value">{{slider1Value}}</span>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <label class="general-labels">Adjust Brightness Level</label>
+          <div class="flex-display">
+            <span class="sound-icon"><img src="../../assets/images/brightness.png"> </span>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" [value]="slider2Value" [(ngModel)]="slider2Value" class="slider"
+                id="myRange">
+            </div>
+            <span class="slider-value">{{slider2Value}}</span>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <label class="general-labels">Adjust Contrast Level</label>
+          <div class="flex-display">
+            <span class="sound-icon"><img src="../../assets/images/contrast.png"> </span>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" [value]="slider3Value" [(ngModel)]="slider3Value" class="slider"
+                id="myRange">
+            </div>
+            <span class="slider-value">{{slider3Value}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="row top-margin">
+        <div class="col-xl-4">
+          <div style="display: flex;align-items: center;">
+            <input type="checkbox" class="chk-style" [checked]="accuracyNo" value="accuracyNo">
+            <label class="general-labels-chk pl-2 pr-1">Display Accuracy Numbers</label>
+            <img class="notifiaction-icon" src="../../assets/images/notification-white.png">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div style="display: flex;align-items: center;">
+            <input type="checkbox" class="chk-style" [checked]="resectionDepth" value="resectionDepth">
+            <label class="general-labels-chk pl-2 pr-1">Display Total Combined Resection Depth</label>
+            <img class="notifiaction-icon" src="../../assets/images/notification-white.png">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div style="display: flex;align-items: center;">
+            <input type="checkbox" class="chk-style" [checked]="autoAdvance" value="autoAdvance">
+            <label class="general-labels-chk pl-2 pr-1">Auto Advance</label>
+            <img class="notifiaction-icon" src="../../assets/images/notification-white.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="general-container">
+    <label class="general-label-title">Joint Assessment</label>
+    <div class="main-container-padding">
+
+      <div class="row flex-end">
+        <div class="col-xl-4">
+          <label class="general-labels">3D bone model to be fixed</label>
+          <div>
+            <div class="horizontal_tabs">
+              <div class="tabs1">
+                <input type="radio" name="tabs1" id="tabone"  [checked]="femur">
+                <label for="tabone" class="tab1 label1" >Femur</label>
+                <input type="radio" name="tabs1" id="tabtwo" [checked]="tibia">
+                <label for="tabtwo" class="tab2 label2" >Tibia</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div style="display: flex;align-items: center;">
+            <input type="checkbox" class="chk-style" [checked]="axisAngle" value="axisAngle">
+            <label class="general-labels-chk pl-2 pr-1">Display Mechanical Axis Angle</label>
+            <img class="notifiaction-icon" src="../../assets/images/notification-white.png">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div style="display: flex;align-items: center;">
+            <input type="checkbox" class="chk-style" [checked]="romAxis" value="romAxis">
+            <label class="general-labels-chk pl-2 pr-1">Display ROM Axes</label>
+            <img class="notifiaction-icon" src="../../assets/images/notification-white.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="general-container">
+    <label class="general-label-title">Preferred Procedure Workflow</label>
+    <div class="main-container-padding">
+
+      <div class="row flex-end">
+        <div class="col-xl-4">
+          <div>
+            <div class="horizontal_tabs">
+              <div class="tabs2">
+                <input type="radio" name="tabs2" id="tabthree" checked="checked">
+                <label for="tabthree" (click)="onImplantPlanning()" class="tab1 label1">Implant Planning</label>
+                <input type="radio" name="tabs2" id="tabfour">
+                <label for="tabfour" (click)="onLigamentBalancing()" class="tab2 label2">Ligament Balancing</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div *ngIf="!isImplantPlanning && isLigamentBalancing">
+            <div class="horizontal_tabs">
+              <div class="tabs3">
+                <input type="radio" name="tabs3" id="tabfive" checked="checked">
+                <label for="tabfive" class="tab1 label1">Distal/Tibia Cut First</label>
+                <input type="radio" name="tabs3" id="tabsix">
+                <label for="tabsix" class="tab2 label2">Pre-Resection Balancing</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+
+        </div>
+      </div>
+      <div class="row flex-end pt-5" *ngIf="!isLigamentBalancing">
+        <div class="col-xl-12">
+            <div style="display: flex;align-items: center;">
+                <input type="checkbox" class="chk-style" checked value="distalMedial">
+                <label class="general-labels-chk pl-2 pr-1">Soft Tissue Landmarks</label>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="general-container">
+    <label class="general-label-title">Planning</label>
+    <div class="main-container-padding">
+
+      <div class="row flex-end">
+        <div class="col-xl-4">
+          <div>
+            <label class="general-labels">Resection Depth Reference</label>
+            <img class="notifiaction-icon" src="../../assets/images/notification-white.png">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div>
+            <div class="horizontal_tabs">
+              <div class="tabs4">
+                <input type="radio" name="tabs4" id="tabseven" checked="checked">
+                <label for="tabseven" class="tab1 label1">Bone Resection</label>
+                <input type="radio" name="tabs4" id="tabeight">
+                <label for="tabeight" class="tab2 label2">Cartilage Resection</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="general-container">
+    <label class="general-label-title">Bone Preparation Cutting Sequence</label>
+    <div class="main-container-padding">
+
+      <div class="row">
+        <div class="col-xl-4 " style="padding-left: 100px;">
+          <div>
+            <div class="right-side-steps">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">1</div>
+              <div>
+                <select class="form-control">
+                  <option value="distal" selected>Distal</option>
+                  <option value="anterior">Anterior</option>
+                  <option value="anteriorChanfer">Anterior Chamfer</option>
+                  <option value="posteriorChamfer">Posterior Chamfer</option>
+                  <option value="posterior">Posterior</option>
+                  <option value="femoralPegHoles">Femoral Peg Holes</option>
+                  <option value="femurNotch">Femur Notch</option>
+                  <option value="tibia">Tibia</option>
+                  <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+            <div class="right-side-steps mt-5">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">4</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer" selected>Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+            <div class="right-side-steps mt-5">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">7</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch" selected>Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4" style="padding-left: 100px;">
+          <div>
+            <div class="right-side-steps">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">2</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior" selected>Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+            <div class="right-side-steps mt-5">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">5</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior" selected>Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+            <div class="right-side-steps mt-5">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">8</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia" selected>Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4" style="padding-left: 100px;">
+          <div>
+            <div class="right-side-steps">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">3</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer" selected>Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+            <div class="right-side-steps mt-5">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">6</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles" selected>Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel">Keel</option>
+                </select>
+              </div>
+            </div>
+            <div class="right-side-steps mt-5">
+              <div class="step-labels">STEP</div>
+              <div class="step-number">9</div>
+              <div>
+                <select class="form-control">
+                    <option value="distal">Distal</option>
+                    <option value="anterior">Anterior</option>
+                    <option value="anteriorChanfer">Anterior Chamfer</option>
+                    <option value="posteriorChamfer">Posterior Chamfer</option>
+                    <option value="posterior">Posterior</option>
+                    <option value="femoralPegHoles">Femoral Peg Holes</option>
+                    <option value="femurNotch">Femur Notch</option>
+                    <option value="tibia">Tibia</option>
+                    <option value="keel" selected>Keel</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-xl-6 left-align">
+      <button class="btn-cancel" value="Login" (click)="onCancel()">Cancel</button>
+    </div>
+    <div class="col-xl-6 right-align">
+      <button class="btn-reset mr-4" (click)="onReset()" value="Reset">Reset</button>
+      <button class="btn-save" value="Save and Load" (click)="onSave()">Save</button>
+    </div>
+  </div>
+</div>
