@@ -1,0 +1,20 @@
+<p-dialog #saveUsbDialog header="Warning-002" [(visible)]="display" [modal]="true" [style]="{width: '1000px', height:'460px'}"
+  [responsive]="true" [draggable]="false" [resizable]="false" styleClass="dialog" [minY]="170" [blockScroll]="true"
+  [closable]="true" [maximizable]="false" [baseZIndex]="10000" (onHide)="onHide()">
+
+  <div class="center-div center-align" style="top:60%;width: 900px;">
+      <img src="../../assets/images/save-usb-sccess-icon.png">
+    <p class="status-msg">Data saving to USB device could not be completed.<br> Retry data saving in another USB device.</p>
+    <div class="row pt-4">
+      <div class="col-xl-12">
+        <div class="form-group center-align">
+          <button type="button" class="btn-Ok" (click)="onHide()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <p-footer>
+        <button type="button" pButton icon="pi pi-check" (click)="display=false" label="Yes"></button>
+        <button type="button" pButton icon="pi pi-times" (click)="display=false" label="No" class="ui-button-secondary"></button>
+    </p-footer> -->
+</p-dialog>

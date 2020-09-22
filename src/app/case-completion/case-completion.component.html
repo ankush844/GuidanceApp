@@ -1,0 +1,64 @@
+<div class="container2">
+    <div class="patient-details">
+        <table class="table table-borderless tbl-patient-details">
+          <tr>
+            <td>Patient ID</td>
+            <td>{{patientId}}</td>
+            <td>Implant Plan ID</td>
+            <td>{{implantPlanId}}</td>
+            <td>Operative Side</td>
+            <td>Left</td>
+            
+          </tr>         
+          <tr>
+            <td>Patient Name</td>
+            <td>{{patientName}}</td>
+            <td>Implant System</td>
+            <td>{{patientName}}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="other-details">
+        <table class="table table-borderless tbl-other-details">
+          <tr>
+            <td>Femur Size</td>
+            <td>3</td>
+            <td>Tibia Size</td>
+            <td>4</td>
+            <td>Insert Thickness</td>
+            <td>6mm</td>
+            
+          </tr>         
+          <tr>
+            <td>Type</td>
+            <td>Cruciate Retaining</td>
+            <td>Type</td>
+            <td>Cruciate Retaining</td>
+            <td>Type</td>
+            <td>Cruciate Retaining</td>
+          </tr>
+        </table>
+      </div>
+      <div class="serial-no-label">
+          <label>Surgical Instrument and Serial Number  <span style="font-weight: 500;">End Effector DXE3121</span></label>
+      </div>
+      <div class="note-container">
+        <p class="note-label">Add Notes</p>
+        <textarea id="w3review" name="w3review" rows="7" ></textarea>
+      </div>
+      <div class="row top-padding">
+        <div class="col-xl-12">
+          <div class="form-group" style="text-align: right;">
+            <button type="button" class="btn-save-claud mr-5" (click)="showSaveCloudDialog()"><img class="pr-3" src="../../assets/images/save-to-cloud.png"> Save to Cloud</button>
+            <button type="button" class="btn-save-usb" (click)="showSaveUSBDialog()">
+                <span class="pr-3"><svg xmlns="http://www.w3.org/2000/svg" width="22.384" height="42.55" viewBox="0 0 22.384 42.55"><defs><style>.a,.b{fill:none;}.a{stroke-linecap:round;}.c,.e{fill:#666;}.d,.e{stroke:none;}</style></defs><g class="a" transform="translate(3)"><path class="d" d="M2.681,0H13.4a2.854,2.854,0,0,1,2.681,3V14c0,1.657-2.639,1.766-2.639,1.766H2.723S0,15.657,0,14V3A2.854,2.854,0,0,1,2.681,0Z"/><path class="e" d="M 2.680698394775391 2.000002861022949 C 2.358738899230957 2.000002861022949 1.999998092651367 2.41069221496582 1.999998092651367 3.000002861022949 L 1.999998092651367 13.60923004150391 C 2.215008735656738 13.68246364593506 2.528877258300781 13.74798583984375 2.780294418334961 13.76562309265137 L 13.38465309143066 13.76562309265137 C 13.60907173156738 13.7487678527832 13.88808917999268 13.68989658355713 14.08421897888184 13.62376594543457 L 14.08421897888184 3.000002861022949 C 14.08421897888184 2.41069221496582 13.72547912597656 2.000002861022949 13.40350818634033 2.000002861022949 L 2.680698394775391 2.000002861022949 M 2.680698394775391 2.86102294921875e-06 L 13.40350818634033 2.86102294921875e-06 C 14.88401889801025 2.86102294921875e-06 16.08421897888184 1.343142509460449 16.08421897888184 3.000002861022949 L 16.08421897888184 14.00000286102295 C 16.08421897888184 15.65685272216797 13.44539833068848 15.76562213897705 13.44539833068848 15.76562213897705 L 2.722588539123535 15.76562213897705 C 2.722588539123535 15.76562213897705 -1.9073486328125e-06 15.65685272216797 -1.9073486328125e-06 14.00000286102295 L -1.9073486328125e-06 3.000002861022949 C -1.9073486328125e-06 1.343142509460449 1.200188636779785 2.86102294921875e-06 2.680698394775391 2.86102294921875e-06 Z"/></g><g class="b" transform="translate(0 13.808)"><path class="d" d="M1.679,0H20.705a1.646,1.646,0,0,1,1.679,1.611V21.179c0,.89-3.122,7.563-11.032,7.563S0,22.069,0,21.179V1.611A1.646,1.646,0,0,1,1.679,0Z"/><path class="e" d="M 2.000003814697266 1.999996185302734 L 2.000003814697266 20.9669017791748 C 2.164552688598633 21.38317108154297 2.878572463989258 22.78029632568359 4.407524108886719 24.14078712463379 C 6.347354888916016 25.86687660217285 8.68381404876709 26.7420768737793 11.35201454162598 26.7420768737793 C 14.00972461700439 26.7420768737793 16.29250335693359 25.87136650085449 18.13693428039551 24.15412712097168 C 19.59055709838867 22.80074501037598 20.24457550048828 21.39493942260742 20.38420486450195 20.99685478210449 L 20.38420486450195 1.999996185302734 L 2.000003814697266 1.999996185302734 M 1.678813934326172 -3.814697265625e-06 L 20.70539474487305 -3.814697265625e-06 C 21.6325740814209 -3.814697265625e-06 22.38420486450195 0.7213058471679688 22.38420486450195 1.611076354980469 L 22.38420486450195 21.17895698547363 C 22.38420486450195 22.0687255859375 19.26181411743164 28.7420768737793 11.35201454162598 28.7420768737793 C 3.442224502563477 28.7420768737793 3.814697265625e-06 22.0687255859375 3.814697265625e-06 21.17895698547363 L 3.814697265625e-06 1.611076354980469 C 3.814697265625e-06 0.7213058471679688 0.7516345977783203 -3.814697265625e-06 1.678813934326172 -3.814697265625e-06 Z"/></g><rect class="c" width="3" height="3" transform="translate(6.65 6.727)"/><rect class="c" width="3" height="3" transform="translate(12.473 6.727)"/></svg></span>
+                Save to USB</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+<app-case-completion-save-cloud-popup [display]="displaySaveCloudDialog" (onNextRoute)="onNextRoute()" (onClose)="onSaveCloudDialogClose()"></app-case-completion-save-cloud-popup>
+<app-case-completion-save-usb-popup [display]="displaySaveUSBDialog" (onClose)="onSaveUSBDialogClose()"></app-case-completion-save-usb-popup>

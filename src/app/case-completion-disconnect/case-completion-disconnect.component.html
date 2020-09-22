@@ -1,0 +1,65 @@
+<div class="container2">
+    <div class="heading-block">
+        <p class="heading-label">Disconnect External Components</p>
+    </div>
+    <div class="main-block">
+        <div class="row">
+            <div class="col-xl-3 center-align">
+              <div class="main-blocks" [ngClass]="isMountEndEffector ? 'disabled-block' : 'enabled-block'">
+                <div class="block1">
+                  <img src="../../assets/images/system-setup/mount_end_effector.png">                  
+                  <!-- <img class="status-icon" src="assets/images/done-tick.png"> -->
+                  <label class="title">End Effector</label>
+                </div>                
+              </div>
+              <div>
+                <button type="button" *ngIf="!isMountEndEffector" class="btn-confirm" (click)="onMountConfirm()">Confirm</button>
+            </div>
+            </div>
+            <div class="col-xl-3 center-align">
+                <div class="main-blocks" [ngClass]="isIrrigation ? 'disabled-block' : 'enabled-block'">
+                  <div class="block1">
+                    <img src="../../assets/images/system-setup/irrigation.png">                  
+                    <!-- <img class="status-icon" src="assets/images/done-tick.png"> -->
+                    <label class="title">Irrigation System</label>
+                  </div>
+                </div>
+                <div>
+                    <button type="button" *ngIf="!isIrrigation" class="btn-confirm" (click)="onIrrigationConfirm()">Confirm</button>
+                </div>
+              </div>
+              <div class="col-xl-3 center-align">
+                <div class="main-blocks" [ngClass]="isBobeTracker ? 'disabled-block' : 'enabled-block'">
+                  <div class="block1 hand-cursor">
+                    <img src="../../assets/images/system-setup/tracker.png">                  
+                    <!-- <img class="status-icon" src="assets/images/done-tick.png"> -->
+                    <label class="title">Bone Trackers</label>
+                  </div>
+                </div>
+                <div>
+                    <button type="button" *ngIf="!isBobeTracker" class="btn-confirm" (click)="onTrackerConfirm()">Confirm</button>
+                </div>
+              </div>
+              <div class="col-xl-3 center-align">
+                <div class="main-blocks" [ngClass]="isCheckpoints ? 'disabled-block' : 'enabled-block'">
+                  <div class="block1">
+                    <img src="assets/images/system-setup/probe.png">                  
+                    <!-- <img class="status-icon" src="assets/images/done-tick.png"> -->
+                    <label class="title">Checkpoints</label>
+                  </div>
+                </div>
+                <div>
+                    <button type="button" *ngIf="!isCheckpoints" class="btn-confirm" (click)="onCheckPointConfirm()">Confirm</button>
+                </div>
+              </div>
+          </div>
+    </div>
+    <div class="row top-padding" [ngClass]="(!isMountEndEffector || !isIrrigation || !isBobeTracker || !isCheckpoints) ? 'top-padding' : 'top-padding1'">
+        <div class="col-xl-12">
+          <div class="form-group" style="text-align: right;">
+            <button type="button" class="btn-prev mr-5" (click)="onPrev()"><img class="icons-prev" src="../../assets/images/prev-icon.png">Previous</button>
+            <button type="button" class="btn-exit" [disabled]="!isMountEndEffector || !isIrrigation || !isBobeTracker || !isCheckpoints" (click)="onExit()">Exit <img class="icons-next" src="../../assets/images/next-icon.png"></button>
+          </div>
+        </div>
+      </div>
+</div>

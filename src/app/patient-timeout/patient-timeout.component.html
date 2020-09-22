@@ -1,0 +1,48 @@
+<p-dialog #errorDialog header="Patient Timeout" [(visible)]="display" [modal]="true" [responsive]="true" [draggable]="false"
+  [resizable]="false" styleClass="dialog" [minY]="170" [blockScroll]="true" [closable]="true" 
+  [maximizable]="false" [baseZIndex]="10000" (onHide)="onHide()"> 
+  <!-- <p-dialog header="Godfather I" [(visible)]="display" modal="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false" (onHide)="onHide()" appendTo="body"> -->
+ <div>
+    <div class="">
+        <table class="table table-borderless">
+            <tr>
+              <td>Patient Name</td>
+              <td>{{patientName}}</td>
+              <td>Implant System</td>
+              <td>Monogram</td>
+            </tr>
+            <tr>
+              <td>Patient ID</td>
+              <td>{{patientId}}</td>
+              <td>Operative Side</td>
+              <td>Left</td>              
+            </tr>
+          </table>
+    </div>
+   
+    <div class="flex-display mt-4">
+        <label class="main-content-heading">Require Surgeon Acknowledgement:</label> 
+        <div class="form-group" style="display: flex;align-items: center;">
+            <input type="checkbox" class="chk-style" value="Femur" (change)="FieldsChange($event)">
+            <label class="font22 pl-3">I validate and accept the implant plan as described for this procedure, I acknowledge that I have read and understood the Monogram Surgical Technique guide for this procedure and implant.</label>
+        </div> 
+        
+       </div>
+ </div>
+ <div class="row pr-4 pt-2">   
+    <div class="col-xl-12">
+      <div class="form-group" style="text-align: center;">
+        <!-- <button type="button" class="btn-agree" (click)="onAgree()">Agree</button> -->
+        <button type="button" class="btn-agree" [disabled]="acknowledge" (click)="onAgree()">Agree</button>
+        <button type="button" class="btn-disagree ml-5" (click)="onDisAgree()">Disagree</button>
+      </div>
+    </div>
+  </div>
+    <!-- <p-footer>
+        <button type="button" pButton icon="pi pi-check" (click)="display=false" label="Yes"></button>
+        <button type="button" pButton icon="pi pi-times" (click)="display=false" label="No" class="ui-button-secondary"></button>
+    </p-footer> -->
+</p-dialog>
+
+ 

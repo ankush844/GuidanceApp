@@ -1,0 +1,77 @@
+:host /deep/ .p-dialog .p-dialog-header {
+  border-bottom-color: #D7E2E4 !important;
+  background-color: #7DADB5;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+:host /deep/ .p-dialog {
+  background-color: #7DADB5;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 5px;
+}
+
+
+:host /deep/ .p-dialog .p-dialog-header .p-dialog-title {
+  font-weight: 600;
+  color: #000;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+:host /deep/ .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #333333;
+  padding: 1rem;
+  background-color: #7DADB5;
+}
+
+:host /deep/ .dialog .p-dialog-header .p-dialog-title::before {
+  content: url("../../assets/images/system-setup/error-popup-icon.png") !important;
+  height: 50px;
+  padding: 0 15px;
+}
+
+:host /deep/ .pi {
+  font-size: 2rem;
+}
+
+:host /deep/ .p-dialog .p-dialog-header .p-dialog-header-icon {
+  color: #666666 !important;
+}
+
+:host /deep/ .p-dialog .p-dialog-header .p-dialog-header-icon:enabled:hover {
+  color: #666666 !important;
+}
+
+.heading-title {
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 12px;
+  color: #000;
+}
+
+.flex-display {
+  display: flex;
+  padding: 30px;
+}
+
+.main-content {
+  padding: 50px;
+  padding-top: 0;
+  font-size: 30px;
+}
+
+.btn-Ok {
+  width: 230px;
+  height: 70px;
+  background-color: #D7E2E4;
+  border: 1px solid #000000;
+  border-radius: 35px;
+  font-size: 25px;
+}
+.btn-Ok:hover {
+  background-color: #A9DFE8;    
+}

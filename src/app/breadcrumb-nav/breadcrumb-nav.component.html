@@ -1,0 +1,15 @@
+
+	<div>
+		<ul class="breadcrumb wizard">
+			<li routerLinkActive="completed" [ngClass]="home ? 'li-completed' : ''" class="li-completed"><a [ngClass]="home ? 'done' : ''" class="done" routerLink="/header/home" routerLinkActive="completed"><img src="assets/images/home_icon.png"> </a></li>
+			<!-- <li routerLink="/implant-details/pre-op-planning" routerLinkActive="completed"><a><span class="complition-tick"></span>Pre-Op Planning</a></li> -->
+			<li routerLinkActive="completed" [ngClass]="systemSetup ? 'li-completed' : ''"><a [ngClass]="systemSetup ? 'done' : ''" routerLink="/header/implant-details/pre-op-planning"><span *ngIf="isSystemSetup" class="complition-tick"></span><span [ngClass]="preOpPlanning ? 'high-opacity' : 'low-opacity'">Pre-Op Planning</span></a></li>
+			<li routerLinkActive="completed" [ngClass]="systemSetup ? 'li-completed' : ''"><a [ngClass]="systemSetup ? 'done' : ''" routerLink="/header/implant-details/system-setup"><span *ngIf="isBoneRegistration" class="complition-tick"></span><span [ngClass]="systemSetup ? 'high-opacity' : 'low-opacity'">System Setup</span></a></li>
+            <li routerLinkActive="completed" [ngClass]="boneRegistration ? 'li-completed' : ''"><a [ngClass]="boneRegistration ? 'done' : ''" routerLink="/header/implant-details/bone-registration"><span *ngIf="isJointAssesment" class="complition-tick"></span><span [ngClass]="boneRegistration ? 'high-opacity' : 'low-opacity'">Bone Registration</span></a></li>
+            <li routerLinkActive="completed" [ngClass]="jointAssesment ? 'li-completed' : ''"><a [ngClass]="jointAssesment ? 'done' : ''" routerLink="/header/implant-details/joint-assesment"><span *ngIf="isIntraOpPlanning" class="complition-tick"></span><span [ngClass]="jointAssesment ? 'high-opacity' : 'low-opacity'">Joint Assessment</span></a></li>
+            <li routerLinkActive="completed" [ngClass]="intraOpPlanning ? 'li-completed' : ''"><a [ngClass]="intraOpPlanning ? 'done' : ''" routerLink="/header/implant-details/intra-op-planning"><span *ngIf="isBonePreparation" class="complition-tick"></span><span [ngClass]="intraOpPlanning ? 'high-opacity' : 'low-opacity'">Intra-Op Planning</span></a></li>
+            <li routerLinkActive="completed" [ngClass]="bonePreparation ? 'li-completed' : ''"><a [ngClass]="bonePreparation ? 'done' : ''" routerLink="/header/implant-details/bone-preparation"><span *ngIf="isCaseCompletion" class="complition-tick"></span><span [ngClass]="bonePreparation ? 'high-opacity' : 'low-opacity'">Bone Preparation</span></a></li>
+            <li routerLinkActive="completed" [ngClass]="caseCompletion ? 'li-completed' : ''"><a [ngClass]="caseCompletion ? 'done' : ''" routerLink="/header/implant-details/case-completion"><span *ngIf="" class="complition-tick"></span><span [ngClass]="caseCompletion ? 'high-opacity' : 'low-opacity'">Case Completion</span></a></li>
+		</ul>
+	</div>
+<router-outlet></router-outlet>

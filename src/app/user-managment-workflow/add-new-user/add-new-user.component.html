@@ -1,0 +1,101 @@
+<div class="main-container">
+  <form [formGroup]="addUserForm" (ngSubmit)="onAddUser()">
+    <div class="row">
+      <div class="col-xl-2"></div>
+      <div class="col-xl-5">
+        <div class="form-group left-align">
+          <label class="change-password-label marging-top">First Name</label>
+          <div class="margin-bottom50">
+            <input type="text" placeholder="Enter first name" formControlName="firstName" class="form-control">
+            <!-- <div *ngIf="firstName.invalid && firstName.touched" class="invalid-feedback">
+              <div *ngIf="nPassword.errors?.required">New password is required</div>
+              <div *ngIf="nPassword.errors?.pattern">Password is not correct format</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-group left-align marging-top">
+          <label class="change-password-label">User Name</label>
+          <div class="margin-bottom50">
+            <input type="text" formControlName="userName" placeholder="Enter username" class="form-control">
+            <!-- <div *ngIf="cPassword.invalid && cPassword.touched" class="invalid-feedback">
+              <div *ngIf="cPassword.errors?.required">Confirm new password is required</div>
+              <div *ngIf="cPassword.errors?.mustMatch">Password must match</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-group left-align marging-top">
+          <label class="change-password-label">Email</label>
+          <div class="margin-bottom50">
+            <input type="text" formControlName="email" placeholder="Enter email" class="form-control">
+            <!-- <div *ngIf="cPassword.invalid && cPassword.touched" class="invalid-feedback">
+              <div *ngIf="cPassword.errors?.required">Confirm new password is required</div>
+              <div *ngIf="cPassword.errors?.mustMatch">Password must match</div>
+            </div> -->
+          </div>
+        </div>
+        <div style="display: flex;align-items: center;" class="marging-top1">
+          <input type="checkbox" formControlName="monogramCertified" class="chk-style" value="axisAngle">
+          <label class="general-labels-chk pl-2 pr-1">Monogram Certified</label>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="form-group left-align marging-top">
+          <label class="change-password-label">Last Name</label>
+          <div class="margin-bottom50">
+            <input type="text" placeholder="Enter last name" formControlName="lastName" class="form-control">
+            <!-- <div *ngIf="nPassword.invalid && nPassword.touched" class="invalid-feedback">
+              <div *ngIf="nPassword.errors?.required">New password is required</div>
+              <div *ngIf="nPassword.errors?.pattern">Password is not correct format</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-group left-align marging-top">
+          <label class="change-password-label">Password</label>
+          <div class="margin-bottom50">
+            <input type="password" formControlName="password" placeholder="Enter password" class="form-control"
+              [class.is-invalid]="password.invalid && password.touched" >
+            <!-- <div *ngIf="cPassword.invalid && cPassword.touched" class="invalid-feedback">
+              <div *ngIf="cPassword.errors?.required">Confirm new password is required</div>
+              <div *ngIf="cPassword.errors?.mustMatch">Password must match</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-group left-align marging-top">
+          <label class="change-password-label">Confirm Password</label>
+          <div class="margin-bottom50">
+            <input type="password" formControlName="confirmPassword" placeholder="Enter confirm password"
+              class="form-control">
+            <!-- <div *ngIf="confirmPassword.invalid && confirmPassword.touched" class="invalid-feedback">
+              <div *ngIf="cPassword.errors?.required">Confirm new password is required</div>
+              <div *ngIf="cPassword.errors?.mustMatch">Password must match</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="form-group left-align marging-top">
+          <label class="change-password-label">Role</label>
+          <div class="margin-bottom50">
+            <!-- <input autofocus #userName type="text" class="form-control"> -->
+            <select class="form-control" formControlName="role"
+              [class.is-invalid]="role.invalid && role.touched">
+              <option value="null">User</option>
+            </select>
+            <!-- <div *ngIf="userName.invalid && userName.touched" class="invalid-feedback">
+              <div *ngIf="userName.errors?.required">Username is required</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-1"></div>
+    </div>
+  </form>
+  <div class="row top-padding">
+    <div class="col-xl-12">
+      <div class="form-group" style="text-align: right;">
+        <button type="button" class="btn-cancel mr-5" (click)="onCancel()">Cancel</button>
+        <!-- <button type="button" class="btn-next" [disabled]="!connectProbe || verifyProbe || connectRobot || dropeRobotic || endEffectot || mountIrrigation || cameraView" (click)="onNext()" >Next <img class="icons-next" src="../../assets/images/next-icon.png"></button> -->
+        <button type="button" class="btn-new-user" (click)="onAddUser()">Add User</button>
+
+      </div>
+    </div>
+  </div>
+</div>

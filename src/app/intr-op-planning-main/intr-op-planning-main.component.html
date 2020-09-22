@@ -1,0 +1,2 @@
+<app-intra-op-planning *ngIf="isNext" (onPreviousRoute)="onPrev()"></app-intra-op-planning>
+<app-soft-tissue-landmarks-intra *ngIf="!isNext" (onNextRoute)="onNext()"></app-soft-tissue-landmarks-intra>
