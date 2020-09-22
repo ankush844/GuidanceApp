@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   isUserOptionPanel: boolean;
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
     this.logggedUser = localStorage.getItem('loginUser');
