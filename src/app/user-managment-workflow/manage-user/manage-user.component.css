@@ -1,0 +1,370 @@
+.breadcrumb {
+  border-radius: 0px !important;
+  width: 100%;
+}
+
+.breadcrumb.wizard {
+  padding: 0px;
+  background: #fff;
+  list-style: none;
+  overflow: hidden;
+  margin-top: 20px;
+  color: #000;
+  font-weight: normal;
+}
+
+.breadcrumb.wizard .li-completed {
+  background: #fff;
+  font-weight: 600;
+  opacity: 1;
+
+}
+
+.breadcrumb.wizard>li+li:before {
+  padding: 0;
+}
+
+.breadcrumb.wizard li {
+  float: left;
+  cursor: pointer;
+  font-weight: 400;
+  width: 258px;
+}
+
+.breadcrumb.wizard li.active a {
+  background: #A9DFE8;
+  font-weight: bold;
+}
+
+.breadcrumb.wizard li.completed a {
+  background: #A9DFE8;
+  border: none;
+
+}
+
+.breadcrumb.wizard li.active a:after {
+  border-left: 30px solid #A9DFE8;
+}
+
+.breadcrumb.wizard li.completed a:after {
+  border-left: 30px solid #A9DFE8;
+}
+
+.breadcrumb.wizard li a {
+  color: #000;
+  text-decoration: none;
+  padding: 15px 10px 15px 40px;
+  position: relative;
+  display: block;
+  float: left;
+  height: 65px !important;
+  align-items: center;
+  display: flex;
+  /* font-weight: 600; */
+  font-size: 22px;
+  pointer-events: none;
+  cursor: default;
+  width: 258px;
+  display: block;
+  text-align: center;
+}
+
+
+.breadcrumb.wizard li a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 258px;
+  z-index: 2;
+}
+
+.breadcrumb.wizard li .done:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 258px;
+  z-index: 2;
+}
+
+.breadcrumb.wizard li a:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 33px solid #B8B9B9;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 258px;
+  z-index: 1;
+}
+
+.breadcrumb.wizard li:last-child a:after {
+  border-top: 0 solid transparent;
+  /* Go big on the size, and let overflow hide */
+  border-bottom: 0 solid transparent;
+  border-left: 0 solid #fff;
+
+}
+
+.breadcrumb.wizard li:last-child a:before {
+  border-top: 0 solid transparent;
+  /* Go big on the size, and let overflow hide */
+  border-bottom: 0 solid transparent;
+  border-left: 0 solid #B8B9B9;
+
+}
+
+.breadcrumb.wizard li:first-child a:after {
+  left: 50px;
+
+}
+
+.breadcrumb.wizard li:first-child a:before {
+  left: 50px;
+
+}
+
+.breadcrumb.wizard li:first-child {
+  width: 50px;
+}
+
+.breadcrumb.wizard li:first-child a {
+  width: 50px;
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+.breadcrumb.wizard li:last-child a {
+  padding-right: 15px;
+}
+
+/* .breadcrumb.wizard li a:hover { background: #A9DFE8  ; } */
+
+/* .breadcrumb.wizard li a:hover:after { border-left-color: #A9DFE8   !important; } */
+.breadcrumb.wizard li a:focus {
+  border: none !important;
+  outline: none;
+}
+
+.breadcrumb.wizard li:focus {
+  border: none !important;
+  outline: none;
+}
+
+.complition-tick {
+  width: 15px;
+  height: 15px;
+  background-color: #43E848;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.breadcrumb.wizard li .done {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+
+
+.main-container {
+  background-color: #97bec4;
+  padding: 30px 0px;
+  margin-top: 40px;
+}
+
+:host /deep/ .p-datatable .p-datatable-thead>tr>th {
+  border: none !important;
+  color: #000;
+  background-color: #97bec4;
+  font-size: 22px;
+  padding-left: 40px;
+  /* background: #f4f4f4; */
+}
+
+:host /deep/ .p-datatable .p-datatable-tbody>tr,
+:host /deep/ .p-datatable .p-datatable-thead>tr {
+  border: none;
+  border-bottom: 1px solid #d0e2e4 !important;
+  background-color: #97bec4;
+  font-size: 22px;
+}
+
+:host /deep/ .p-datatable .p-datatable-tbody>tr:nth-child(odd) {
+  border: none;
+  border-bottom: 1px solid #d0e2e4 !important;
+  background-color: #a2c5ca;
+  font-size: 22px;
+}
+
+/* :host /deep/ .p-datatable .p-datatable-tbody>tr:hover {
+    border: 1px solid #bed6da  !important;
+    background-color: #A9DFE8;
+  
+  } */
+
+:host /deep/ .p-datatable .p-datatable-tbody>tr>td,
+:host /deep/ .p-datatable .p-datatable-thead>tr>th {
+  height: 90px;
+  border: none !important;
+  color: #000;
+  padding-left: 40px;
+}
+
+:host /deep/ .p-checkbox {
+  width: 50px;
+  height: 50px;
+}
+
+:host /deep/ .p-checkbox .p-checkbox-box {
+
+  width: 50px;
+  height: 50px;
+  /* transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s; */
+}
+
+:host /deep/ .p-checkbox .p-checkbox-box .p-checkbox-icon {
+  font-size: 25px;
+}
+
+
+:host /deep/ .p-datatable .p-datatable-tbody>tr>td:nth-child(7) {
+  padding-right: 40px;
+}
+
+:host /deep/ .p-datatable table {
+  border-collapse: collapse;
+  width: 100% !important;
+  table-layout: fixed;
+}
+
+:host /deep/ .p-dialog .p-dialog-header .p-dialog-title {
+  font-weight: 600;
+  color: #000;
+  font-size: 30px;
+  padding: 1rem;
+  ;
+}
+
+:host /deep/ .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #333333;
+  padding: 30px 0px;
+  background-color: #A9DFE8;
+}
+
+:host /deep/ .pi {
+  font-size: 2rem;
+}
+
+:host /deep/ .p-dialog .p-dialog-header .p-dialog-header-icon {
+  color: #666666 !important;
+}
+
+:host /deep/ .p-dialog .p-dialog-header .p-dialog-header-icon:enabled:hover {
+  color: #666666 !important;
+}
+
+.flex-disp {
+  display: flex;
+  align-items: center;
+  padding: 0px 40px;
+  margin-bottom: 30px;
+}
+
+
+.btn-load-implant {
+  color: #FFFFFF;
+  border: none !important;
+  background-color: transparent;
+  font-size: 22px;
+}
+
+.chk-style {
+  background: #D7E2E4;
+  height: 50px;
+  width: 50px;
+}
+
+.btn-load-implant:hover {
+  background-color: transparent;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: black;
+  outline: 0;
+  box-shadow: none;
+}
+
+.search-box {
+  margin-bottom: 30px;
+  width: 50%;
+}
+
+.input-search {
+  width: 710px;
+  height: 68px;
+  border: none;
+  background-color: #D7E2E4;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 22px;
+}
+
+.implant-count {
+  /* text-align: right;
+    padding-right: 4%; */
+  position: relative;
+  left: 50px;
+  font-size: 22px;
+  color: #000;
+}
+
+.btn-edit {
+  width: 200px;
+  height: 70px;
+  background: #D7E2E4 0% 0% no-repeat padding-box;
+  border: 1px solid #000000;
+  border-radius: 35px;
+  font-size: 25px;
+  color: #000;
+}
+
+.btn-delete {
+  width: 200px;
+  height: 70px;
+  background: #D7E2E4 0% 0% no-repeat padding-box;
+  border: 1px solid #000000;
+  border-radius: 35px;
+  font-size: 25px;
+  color: #000;
+  margin-left: 40px;
+}
+
+.btns-gropus {
+  position: absolute;
+  right: 70px;
+}

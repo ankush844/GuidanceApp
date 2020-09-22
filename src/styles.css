@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/primeng/resources/themes/nova/theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+
+body {
+  font-style: Open Sans;
+  color: black;
+}
+
+.container1 {
+  padding: 15px 32px;
+}
+
+.tbl-patient-details tr td:nth-child(2) {
+  font-weight: 600;
+}
+
+.btn-inc-dec {
+  border: 1px solid #000000;
+  background-color: #D7E2E4;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  font-size: 22px;
+}
+
+.btn-Prev,
+.btn-next {
+  width: 230px;
+  height: 70px;
+  border: 1px solid #000000;
+  background-color: #D7E2E4;
+  /* padding: 5px 60px; */
+  border-radius: 35px;
+  font-size: 25px;
+  position: relative;
+}
+
+.icons-prev{
+  position: absolute;
+  left: 20px;
+  top: 24px;
+}
+
+.icons-next{
+  position: absolute;
+  right: 20px;
+  top: 24px;
+}
+
+.btn-Prev:hover,
+.btn-next:hover,
+.btn-prev:hover,
+.btn-exit:hover {
+  background-color: #A9DFE8;
+  
+}
+
+.image-body {
+  width: 1234px;
+  height: 814px;
+  float: left;
+  position: relative;
+}
+
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.patient-details {
+  background-color: #cedee0;
+  padding: 17px 10px;
+  font-size: 20px;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font22 {
+  font-size: 22px;
+}
+
+.font25 {
+  font-size: 25px;
+}
+
+.font30 {
+  font-size: 30px;
+}
+
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.right-notification-icon {
+  position: absolute;
+  right: 15px;
+}
+
+button[disabled] {
+  background-color: #8B8B8B !important;
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+select {
+  color: black !important;
+  border: 1px solid #000000 !important;
+  border-radius: 3px !important;
+}
+
+.p-dialog .p-dialog-header-icons {
+  position: absolute !important;
+  right: 30px !important;
+  top: 30px !important;
+}
+
+.is-invalid, .is-invalid:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  background-image: none !important;
+}
+

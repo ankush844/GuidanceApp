@@ -1,0 +1,202 @@
+<div class="container2">
+  <div class="col_patient-Details">
+    <div class="patient-details">
+      <table class="table table-borderless tbl-patient-details">
+        <tr>
+          <td>Patient ID</td>
+          <td>{{patientId}}</td>
+          <td>Operative Side</td>
+        </tr>
+        <tr>
+          <td>Implant Plan ID</td>
+          <td>{{implantPlanId}}</td>
+          <td class="bold-font">Left</td>
+        </tr>
+        <tr>
+          <td>Patient Name</td>
+          <td>{{patientName}}</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="left-side-buttons">
+      <div class="">
+        <div class="tab-body-select">
+          <div class="form-group">
+            <span class="block-display">Femur</span>
+            <select class="form-control rounded-0">
+              <option value="cruciateRetaining">Cruciate Retaining</option>
+              <option value="posteriorStabilised">Posterior Stabilised</option>
+            </select>
+          </div>
+        </div>
+        <div class="tab-body-dec">
+          <div class="">
+            <span class="block-display">Size</span>
+            <button type="button" class="btn-inc-dec tab-body-dec" (click)="decFemurSize()"><img src="../../assets/images/minus.png"> </button>
+            <label class="lbl-size">{{femurSize}}</label>
+            <button type="button" class="btn-inc-dec tab-body-inc" (click)="incFemurSize()"><img src="../../assets/images/plus.png"> </button>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="tab-body-select">
+          <div class="form-group">
+            <span class="block-display">Tibia</span>
+            <select class="form-control rounded-0">
+              <option value="cruciateRetaining">Cruciate Retaining</option>
+              <option value="posteriorStabilised">Posterior Stabilised</option>
+            </select>
+          </div>
+        </div>
+        <div class="tab-body-dec">
+          <div class="">
+            <span class="block-display">Size</span>
+            <button type="button" class="btn-inc-dec tab-body-dec" (click)="decTibiaSize()"><img src="../../assets/images/minus.png"></button>
+            <label class="lbl-size">{{tibiaSize}}</label>
+            <button type="button" class="btn-inc-dec tab-body-inc" (click)="incTibiaSize()"><img src="../../assets/images/plus.png"></button>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="tab-body-select">
+          <div class="form-group">
+            <span class="block-display">Insert</span>
+            <select class="form-control rounded-0">
+              <option value="cruciateRetaining">Congruent</option>
+              <option value="cruciateRetaining">Ultracongruent</option>
+              <option value="posteriorStabilised">Posterior Stabilizing</option>
+            </select>
+          </div>
+        </div>
+        <div class="tab-body-dec">
+          <div class="">
+            <span class="block-display">Thickness (mm)</span>
+            <button type="button" class="btn-inc-dec tab-body-dec" (click)="decThickness()"><img src="../../assets/images/minus.png"></button>
+            <label class="lbl-size">{{thickness}}</label>
+            <button type="button" class="btn-inc-dec tab-body-inc" (click)="incThickness()"><img src="../../assets/images/plus.png"></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row top-padding">
+      <div class="col-xl-6">
+        <div class="form-group">
+          <button type="button" class="btn-Prev" (click)="onPrev()"><img class="icons-prev" src="../../assets/images/prev-icon.png"> Previous</button>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="form-group" style="text-align: right;">
+          <button type="button" class="btn-next" (click)="onNext()">Next <img class="icons-next" src="../../assets/images/next-icon.png"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="patient-images">
+    <div>
+      <div class="image-body">
+        <div class="main-images">
+          <div class="black-header">         
+            <div class="camera-option">
+              <img class="mr-5" src="assets/images/intra-op-planning/option7.png">
+              <img src="assets/images/intra-op-planning/option8.png">
+            </div>
+          </div>
+          <div class="row1-blocks">
+            <div class="block1">
+              <div class="center-div">
+                <img src="assets/images/pre-opp-planning/block1-img1.png">
+                <img  class="center-div-img" src="assets/images/pre-opp-planning/img-mask.png">
+              </div>
+              <div class="sect-top-label-style">
+                <div class="label-heading">FEMUR VARUS/VALGUS</div>
+                <div class="main-content">0.0<sup>0</sup></div>
+              </div>
+              <div class="sect-top-left1">
+                <div class="label-heading">Distal Resection</div>
+                <div class="main-content">7.5 mm</div>
+              </div>
+              <div class="sect-top-right1">
+                <div class="label-heading">Distal Resection</div>
+                <div class="main-content">9.5 mm</div>
+              </div>
+              <div class="sect-top-left2">
+                <div class="label-heading">posterior Resection</div>
+                <div class="main-content">9.0 mm</div>
+              </div>
+              <div class="sect-top-right2">
+                <div class="label-heading">posterior Resection</div>
+                <div class="main-content">5.5 mm</div>
+              </div>
+              <div class="sect-middle-left">
+                <div class="label-middle-heading">M</div>
+              </div>
+              <div class="sect-middle-right">
+                <div class="label-middle-heading">L</div>
+              </div>
+              <div class="sect-top-left3">
+                <div class="label-heading">proximal Resection</div>
+                <div class="main-content">4.0 mm</div>
+              </div>
+              <div class="sect-top-right3">
+                <div class="label-heading">proximal Resection</div>
+                <div class="main-content">10.0 mm</div>
+              </div>
+              <div class="sect-bottom-label-style">
+                <div class="label-heading">TIBIA VARUS/VALGUS</div>
+                <div class="main-content">0.0<sup>0</sup></div>
+              </div>
+            </div>
+            <div class="block2">
+              <div class="sect-top-label-style">
+                <div class="label-heading">FLEXION</div>
+                <div class="main-content">3.0<sup>0</sup></div>
+              </div>
+              <div class="center-div">                
+                <img src="assets/images/pre-opp-planning/block1-img2.png">
+              </div>
+              <div class="sect-bottom-label-style" style="left: 29%;">
+                <div class="label-heading">posterior Slope</div>
+                <div class="main-content">7.0<sup>0</sup></div>
+              </div>
+            
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="image-options">
+        <!-- <div class="pt-2"><a href="#"><img src="assets/images/intra-op-planning/zoomIn.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/zoomOut.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/brightness.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/contrast.png"></a></div>
+
+        <div class="pt-5"><a href="#"><img src="assets/images/intra-op-planning/option1.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option2.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option3.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option4.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option5.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option6.png"></a></div>
+
+        <div class="pt-5"><a href="#"><img src="assets/images/intra-op-planning/option7.png"></a></div>
+        <div class="pt-3"><a href="#"><img src="assets/images/intra-op-planning/option8.png"></a></div> -->
+        <div>
+          <div class="view-label">View</div>
+          <button type="button" class="btn-options btn-highlight">Extension</button>
+          <button type="button" class="btn-options btn-normal">Flexion</button>
+          <button type="button" class="btn-options btn-normal">Axial Tibia</button>
+          <div class="view-label">Show</div>
+          <button type="button" class="btn-options btn-highlight">Implants</button>
+          <button type="button" class="btn-options btn-highlight">Cuts</button>
+          <button type="button" class="btn-options btn-disabled">Axes</button>
+          <button type="button" class="btn-options btn-normal">Landmarks</button>
+          <button type="button" style="margin-top: 20px;" class="btn-options btn-normal">Balance</button>
+          <button type="button" class="btn-options btn-normal">Restore</button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

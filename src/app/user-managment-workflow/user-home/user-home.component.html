@@ -1,0 +1,40 @@
+<div class="main_home">
+    <div class="view-demo">
+      <div class="">
+        <div class="implant-buttons">
+          <div class="">
+            <div style="text-align:center">
+              <h2 style="font-size: 30px;">Database</h2>
+            </div>
+            <p class="para-font">Access and manage all the required information.</p>
+            <div class="plans-btn-groups left-align" style="padding-left: 220px;">
+              <button type="button" class="btn-cloud-usb" (click)="showCloudDialog()">
+                <span class="pr-3"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="42" viewBox="0 0 52 42"><defs><style>.a{fill:#666;}</style></defs><path class="a" d="M1806.982,740.8c-12.6,0-26,2.948-26,8.412v25.175c0,5.464,13.4,8.413,26,8.413s26-2.949,26-8.413V749.216C1832.982,743.752,1819.587,740.8,1806.982,740.8Zm0,2c14.87,0,24,3.734,24,6.412s-9.13,6.413-24,6.413-24-3.735-24-6.413S1792.113,742.8,1806.982,742.8Zm-24,9.807c4.192,3.279,14.325,5.018,24,5.018s19.809-1.739,24-5.018v5c0,2.678-9.13,6.414-24,6.414s-24-3.736-24-6.414Zm24,28.193c-14.869,0-24-3.736-24-6.413v-5c4.192,3.279,14.325,5.018,24,5.018s19.809-1.739,24-5.018v5C1830.982,777.068,1821.852,780.8,1806.982,780.8Zm0-8.392c-14.869,0-24-3.735-24-6.413v-5c4.192,3.279,14.325,5.018,24,5.018s19.809-1.739,24-5.018v5C1830.982,768.677,1821.852,772.412,1806.982,772.412Z" transform="translate(-1780.982 -740.804)"/></svg></span>
+                Manage Database</button>
+            </div>         
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="load-implant">
+      <div class="implant-buttons">
+        <div class="">
+          <div style="text-align:center">
+            <h2 style="font-size: 30px;">User Management</h2>
+          </div>
+          <p class="para-font">Create new users, delete users, and access privileges'</p>
+          <div class="plans-btn-groups">
+            <button type="button" class="btn-cloud-usb" (click)="manageUsers()">
+              <span class="pr-3"><svg xmlns="http://www.w3.org/2000/svg" width="40.401" height="42" viewBox="0 0 40.401 42"><defs><style>.a{fill:#666;}</style></defs><path class="a" d="M1928.45,716.272l-.749-.462-.554.684a11.517,11.517,0,0,1-18.081,0l-.553-.684-.749.462a20.859,20.859,0,0,0-9.857,17.907v1h40.4v-1A20.856,20.856,0,0,0,1928.45,716.272Zm-28.518,16.907a18.838,18.838,0,0,1,8.171-14.742,13.494,13.494,0,0,0,20.009,0,18.841,18.841,0,0,1,8.171,14.742Z" transform="translate(-1897.907 -693.179)"/><path class="a" d="M1918.107,716a11.415,11.415,0,1,0-11.057-11.41A11.25,11.25,0,0,0,1918.107,716Zm0-20.819a9.416,9.416,0,1,1-9.057,9.409A9.247,9.247,0,0,1,1918.107,695.179Z" transform="translate(-1897.907 -693.179)"/></svg></span>
+              Manage Users</button>
+            <button type="button" class="btn-cloud-usb ml-4" (click)="addNewUser()">
+              <span class="pr-3"><svg xmlns="http://www.w3.org/2000/svg" width="44.057" height="42.107" viewBox="0 0 44.057 42.107"><defs><style>.a{fill:#666;}</style></defs><path class="a" d="M1976.393,714.212a11.415,11.415,0,1,0-11.058-11.41A11.249,11.249,0,0,0,1976.393,714.212Zm0-20.819a9.416,9.416,0,1,1-9.058,9.409A9.248,9.248,0,0,1,1976.393,693.393Z" transform="translate(-1956.193 -691.393)"/><g transform="translate(-1956.193 -691.393)"><path class="a" d="M1989.75,731.393h-31.533a18.841,18.841,0,0,1,8.171-14.742,13.495,13.495,0,0,0,20.01,0,18.647,18.647,0,0,1,3.352,2.931v-2.823a20.718,20.718,0,0,0-3.014-2.272l-.749-.463-.554.684a11.517,11.517,0,0,1-18.081,0l-.554-.684-.749.463a20.855,20.855,0,0,0-9.856,17.906v1h33.557Z"/></g><path class="a" d="M2000.25,725h-6.5v-6.5h-2V725h-6.5v2h6.5v6.5h2V727h6.5Z" transform="translate(-1956.193 -691.393)"/></svg></span>
+              Add New User</button>
+          </div>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <app-add-new-user [isNewUser]="isAddNewUser" *ngIf="isAddNewUser" (onClose)="closeNewUser()"></app-add-new-user> -->
+  

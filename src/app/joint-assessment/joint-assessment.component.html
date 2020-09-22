@@ -1,0 +1,169 @@
+<div class="container2">
+  <div class="col_patient-Details">
+    <div class="patient-details">
+      <table class="table table-borderless tbl-patient-details">
+        <tr>
+          <td>Patient ID</td>
+          <td>{{patientId}}</td>
+          <td>Operative Side</td>
+        </tr>
+        <tr>
+          <td>Implant Plan ID</td>
+          <td>{{implantPlanId}}</td>
+          <td class="bold-font">Left</td>
+        </tr>
+        <tr>
+          <td>Patient Name</td>
+          <td>{{patientName}}</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="left-side-buttons">
+      <div class="horizontal_tabs mb-5">
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone" class="tab1 label1" (click)="selectTab1()">Pre-Op</label>  
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo" class="tab2 label2" (click)="selectTab2()">Post-Op</label>          
+        </div>
+      </div>
+      <div>
+       <a (click)="decPoses()">
+          <img src="../../assets/images/joint-assesment/left-arrow-btn.png">
+        </a>
+        <span class="poses-label">{{posesSize}} Poses</span>
+        <a (click)="incPoses()">
+          <img src="../../assets/images/joint-assesment/right-arrow-btn.png">
+        </a>
+        <div>
+          <button type="button" class="btn-capture">Capture</button>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row top-padding">
+      <div class="col-xl-6">
+        <div class="form-group">
+          <button type="button" class="btn-Prev" (click)="onPrev()"><img class="icons-prev" src="../../assets/images/prev-icon.png">Previous</button>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="form-group" style="text-align: right;">
+          <button type="button" class="btn-next" (click)="onNext()">Next<img class="icons-next" src="../../assets/images/next-icon.png"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="patient-images">
+    <div>
+      <div class="image-body">
+        <div class="black-header">
+          <div class="other-option">
+            <span class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="29.412" viewBox="0 0 30 29.412"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M748.818,315.257s0-13.2-1.467-15.646-4.889-5.867-4.4-8.312-.489-4.4,3.423-4.889,6.356.978,9.29,0,6.845-.489,8.8,0,2.934,4.889.489,8.312-4.4,5.378-4.889,9.779a71.566,71.566,0,0,0,0,10.757Z" transform="translate(-742.903 -285.845)"/><path class="a" d="M791.845,296s-1.467,4.4-3.912,6.356S785,304.312,785,304.312v15.646h3.912l1.467-13.2a28.194,28.194,0,0,0,1.956-2.445c1.467-1.956,2.445-5.378,1.956-6.356A6.824,6.824,0,0,0,791.845,296Z" transform="translate(-764.417 -291.035)"/></svg></span>
+            <span class="mr-4 ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="23.637" height="30" viewBox="0 0 23.637 30"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M857.444,281s-.891,9.358-2.228,11.587-3.98,4.031-4.9,5.348c-3.119,4.456,0,8.021.891,9.8s2.674,4.456,4.456,2.674,3.12-4.9,4.9-4.9a20.82,20.82,0,0,1,6.239,1.783c.891.446,4.011.891,4.011,0,0-.791,4.011-6.685,0-8.913-1.1-.612-3.12-1.337-3.12-2.228V281.446Z" transform="translate(-848.958 -281)"/></svg>
+            </span>
+            <span class="mr-4 ml-3"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="51.369" viewBox="0 0 50 51.369"><defs><style>.a{fill:#fff;}.b,.d{fill:none;}.b{stroke:#43e848;stroke-width:2px;}.c{stroke:none;}</style></defs><g transform="translate(1.147 2)"><path class="a" d="M924.57,344.023a2.511,2.511,0,0,0-2.374,1.709h-1.781V344h-1.889v1.731H916.85a2.518,2.518,0,1,0,0,1.889h1.677v14.218a2.514,2.514,0,0,0,0,4.664v14.016h.63V395h.63V380.518h.63V366.5a2.514,2.514,0,0,0,0-4.664V347.62H922.3a2.515,2.515,0,1,0,2.267-3.6Z" transform="translate(-444.731 -849.14) rotate(40)"/><g class="b" transform="translate(0.853)"><rect class="c" width="46" height="46"/><rect class="d" x="-1" y="-1" width="48" height="48"/></g></g></svg></span>
+           <span class="ml-3"><svg xmlns="http://www.w3.org/2000/svg" width="13.918" height="43.201" viewBox="0 0 13.918 43.201"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M1040.239,269.159,1034,272.518V261h6.239Z" transform="translate(-1034 -261)"/><path class="a" d="M1044.078,272c-1.44,0-1.92,3.839-1.92,3.839L1034,280.159l5.279,7.679,2.88,2.4.135,5.9.521.047-.416,13.72.48.014.415-13.691.714.065.551-6.058,2.4-2.4s.96-10.559.96-12S1045.518,272,1044.078,272Z" transform="translate(-1034 -266.721)"/></svg></span>
+          </div>
+          <div class="camera-option">
+            <img class="mr-4 ml-3" src="assets/images/intra-op-planning/option7.png">
+            <img class="ml-3" src="assets/images/intra-op-planning/option8.png">
+          </div>
+        </div>
+        <div class="main-images">
+          <div class="row1-blocks">
+            <div class="block1">
+              <div class="block1-center-div">
+                <img src="../../assets/images/joint-assesment/img1.png">
+              </div>
+              <!-- <div class="sect-top-label-style">
+                <div class="label-heading1">Sagittal View</div>
+              </div> -->
+              <div class="sect-top-left1">
+                <div class="label-heading">FLEXION</div>
+                <div class="main-content">93.0 <sup>0</sup></div>
+              </div>
+              <div class="sect-top-center">
+                <div class="label-heading" style="opacity: 0.5; font-size: 15px;">FLEXION (Degrees)</div>
+              </div>
+              <div class="sect-top-left2">
+                <div class="label-heading">VARUS</div>
+                <div class="main-content">1.5 <sup>0</sup></div>
+              </div>
+              <!-- <div class="sect-top-right2">
+                <div class="label-heading">posterior Resection</div>
+                <div class="main-content">5.5 mm</div>
+              </div> -->
+              <!-- <div class="sect-middle-left">
+                <div class="label-middle-heading">M</div>
+              </div>
+              <div class="sect-middle-right">
+                <div class="label-middle-heading">L</div>
+              </div> -->
+              <div class="sect-top-left3">
+                <div class="label-heading">TIBIA Internal</div>
+                <div class="main-content">3.5 <sup>0</sup></div>
+              </div>
+           
+            </div>
+            <div class="block2">
+              <!-- <div class="sect-top-label-style">
+                <div class="label-heading1">Coronal View</div>
+              </div> -->
+              <div class="block2-center-div">
+                <img src="../../assets/images/joint-assesment/img2.png">
+              </div>
+              <div class="sect-top-right1">
+                <div class="label-heading">FLEXION</div>
+                <div class="main-content">17.0 <sup>0</sup></div>
+              </div>
+              <div class="sect-top-right2">
+                <div class="label-heading">VARUS</div>
+                <div class="main-content">4.5 <sup>0</sup></div>
+              </div>
+              <div class="sect-top-right3">
+                <div class="label-heading">TIBIA Internal</div>
+                <div class="main-content">4.0 <sup>0</sup></div>
+              </div>
+             
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="image-options">
+        <!-- <div class="pt-2"><a href="#"><img src="assets/images/intra-op-planning/zoomIn.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/zoomOut.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/brightness.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/contrast.png"></a></div>
+
+        <div class="pt-5"><a href="#"><img src="assets/images/intra-op-planning/option1.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option2.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option3.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option4.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option5.png"></a></div>
+        <div class="pt-4"><a href="#"><img src="assets/images/intra-op-planning/option6.png"></a></div>
+
+        <div class="pt-5"><a href="#"><img src="assets/images/intra-op-planning/option7.png"></a></div>
+        <div class="pt-3"><a href="#"><img src="assets/images/intra-op-planning/option8.png"></a></div> -->
+        <div>
+          <div class="view-label">View</div>
+          <button type="button" class="btn-options btn-disabled">Extension</button>
+          <button type="button" class="btn-options btn-disabled">Flexion</button>
+          <button type="button" class="btn-options btn-disabled">Axial Tibia</button>
+          <div class="view-label">Show</div>
+          <button type="button" class="btn-options btn-normal">Implants</button>
+          <button type="button" class="btn-options btn-highlight">Axes</button>
+          <button type="button" class="btn-options btn-disabled">Cuts</button>          
+          <button type="button" class="btn-options btn-disabled">Landmarks</button>
+          <button type="button" class="btn-options btn-disabled">Balance</button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
